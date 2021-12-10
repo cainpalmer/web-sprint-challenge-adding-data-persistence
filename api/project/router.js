@@ -1,9 +1,10 @@
-// build your `/api/projects` router here
+
+// Imports
 const express = require('express')
 const Projects = require('./model')
 const router = express.Router()
 
-
+// Routers
 router.get("/", (req, res, next) => {
     Projects.getAll()
         .then((projects) => {
@@ -27,4 +28,5 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+// Exports
 module.exports = router

@@ -1,6 +1,8 @@
-// build your `Resource` model here
+
+// Imports
 const db = require('../../data/dbConfig')
 
+// Actions
 const getAll = () => {
     return db('resources')
 }
@@ -9,6 +11,7 @@ const create = async (resource) => {
     return db('resources').where('resource_id', id).first()
 }
 
+// Exports
 module.exports = {
     getAll,
     create

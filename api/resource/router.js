@@ -1,8 +1,10 @@
-// build your `/api/resources` router here
+
+// Imports
 const express = require('express')
 const Resources = require('./model')
 const router = express.Router()
 
+// Routers
 router.get('/', (req, res, next) => {
     Resources.getAll()
         .then(resource => {
@@ -20,4 +22,5 @@ router.post('/', async (req, res, next) => {
     }
 })
 
+// Exports
 module.exports = router
